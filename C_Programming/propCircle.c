@@ -36,7 +36,7 @@ void main()
 }
 
 
-
+/*
 Calculator:
     press:
         + to add .
@@ -64,7 +64,7 @@ exp ==> a,e,i,o,u ==> vowel
 
 
 
-
+*/
 
 
 
