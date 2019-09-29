@@ -3,8 +3,12 @@
 void login();
 int menu();
 void option(int opt);
+void checkBalance();
+void deposit();
+void withdraw();
+void proceed();
 
-int T = 1000;
+float totalAmount = 0;
 
 
 void main()
@@ -12,24 +16,105 @@ void main()
     login();
 }
 
+void proceed()
+{
+    char ch;
+    int opt;
+    printf("\nPress Y to continue... ");
+    scanf(" %c",&ch);
+    system("cls");
+    if(ch == 'Y' || ch == 'y')
+    {
+       opt = menu();
+       option(opt);
+    }
+    else
+    {
+        printf("\nSee you Soon...\n");
+    }
+}
+
+void withdraw()
+{
+    float withdrawAmount;
+    system("cls");
+    printf("\nEnter Withdrawal Amount: ");
+    scanf("%f",&withdrawAmount);
+    system("cls");
+    if(withdrawAmount <= totalAmount)
+    {
+        if(withdrawAmount <= 10000)
+        {
+            if((int)withdrawAmount % 500 == 0)
+            {
+                totalAmount -= withdrawAmount;
+                printf("\nAmount Withdrawn is %.2f\n",withdrawAmount);
+                printf("\nYour New Balance is %.2f\n",totalAmount);
+            }
+            else
+            {
+                printf("\nAmount must be a multiple of 500\n");
+            }
+        }
+        else
+        {
+            printf("\nAmount Exceeds per transaction limit (10000)\n");
+        }
+
+    }
+    else{
+        printf("\nYou do not have sufficient balance\n");
+    }
+}
+
+void deposit()
+{
+    float depositAmount;
+    system("cls");
+    printf("\nEnter Deposit Amount : ");
+    scanf("%f",&depositAmount);
+    system("cls");
+    if(depositAmount <= 25000)
+    {
+        totalAmount += depositAmount;
+        printf("\nDeposited Amount is %.2f\n",depositAmount);
+        printf("\nYour New Balance is %.2f\n",totalAmount);
+    }
+    else
+    {
+        printf("\nYour Deposit Amount exceeds 25000\n");
+    }
+
+}
+
+
+void checkBalance(){
+    system("cls");
+    printf("\nYour Current Balance is %.2f\n",totalAmount);
+}
+
 void option(int opt)
 {
     switch(opt)
     {
     case 1:
-        printf("Check Balance");
+        checkBalance();
+        proceed();
         break;
     case 2:
-        printf("Deposit");
+        deposit();
+        proceed();
         break;
     case 3:
-        printf("Withdraw");
+        withdraw();
+        proceed();
         break;
     case 4:
-        printf("Exit");
-        break;
+        exit(0);
     default:
-        printf("Invalid Option!");
+        system("cls");
+        printf("\nInvalid Option!\n");
+        proceed();
     }
 }
 

@@ -18,7 +18,7 @@ void main()
     int a,b,x;
     printf("Enter two numbers a and b ");
     scanf("%d%d",&a,&b);
-    x = sum(a,b);
+    x = sum(1,2);
     printf(" sum = %d ",x);
     printf("sum = %d ",sum(a,b));
     add();
@@ -45,7 +45,7 @@ cash transaction
 1. Balance check
 2. Deposit    ==> 25000
 3. Withdraw   ==> 20000    multiple of 500
-4. Exit
+4. Exit       ==>
 
 
 
