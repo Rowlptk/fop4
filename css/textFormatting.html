@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>text formatting</title>
+    <style>
+        h1{
+            text-align:right;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+        h2{
+            text-align: center ;
+            text-decoration: overline;
+            text-transform: lowercase;
+        }
+        h3{
+            text-align: left;
+            text-decoration: line-through;
+        }
+        p{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            /* font-family:cursive; */
+            font-size: 20px;
+            font-weight:900;
+            font-style:italic;
+            text-align: justify;
+            text-transform: capitalize;
+            letter-spacing: 5px;
+            word-spacing: 10px;
+            line-height: 1.5;
+            text-shadow:1px 1px red;
+        }
+
+        @media screen and (max-width: 400px){
+            p{
+                font-family:cursive
+            }
+        }
+        
+        a{
+            text-decoration: none;
+        }
+
+        /* text-shadow: h-shadow v-shadow color */
+    </style>
+</head>
+<body>
+
+    <a href="#">Google</a>
+
+    <h1>right</h1>
+    <h2>center</h2>
+    <h3>left</h3>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+         Quam reiciendis quae quibusdam possimus perferendis magnam! 
+         Magni itaque numquam consectetur nam sed inventore fuga ab 
+         dolore facilis, vero ex est unde.
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+         Quam reiciendis quae quibusdam possimus perferendis magnam! 
+         Magni itaque numquam consectetur nam sed inventore fuga ab 
+         dolore facilis, vero ex est unde.
+        </p>
+</body>
+</html>

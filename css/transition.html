@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transition</title>
+    <style>
+        div{
+            background-color: brown;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: 20px dashed black;
+        }
+        div > h1{
+            transition-duration: 6s;
+            transition-property: all;
+            /* transition-delay: 2s; */
+            /* transition-timing-function: ease; */
+            opacity: 1;
+            /* visibility: visible; */
+            /* linear ==> same speed */
+            /* ease ==> slow start, fast, slow end */
+            /* ease-in ==> slow start ,linear till end */
+            /* ease-out ==> linear start, slow end */
+            /* ease-in-out ==> slow start, linear,slow end */
+            /* cubic-bezier(x1,y1,x2,y2) */
+        }
+        div:hover > h1{
+            /* transform: rotate(1440deg); */
+            opacity: 0;
+            /* visibility: hidden; */
+            /* width: 400px; */
+            /* height: 400px; */
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1>this is a head</h1>
+    </div>
+</body>
+</html>

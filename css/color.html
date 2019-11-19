@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* %, vw, vh */
+        /* max-width, min-width, max-height, min-height */
+
+        body{
+            /* background-image: url('img/exp.jpg'); */
+            background-image: url('/css/img/exp.jpg');
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh;
+            background-attachment: fixed;
+        }
+        div{
+            height:200px;
+            width: 200px;
+            margin-bottom: 5px;
+            border-radius: 50%;
+        }
+        #d1{
+            /* 140 total standard color names  */
+            background-color:tomato;
+            /* border-width: 2px;
+            border-style:solid;
+            border-color:black; */
+            border: 2px solid black;
+            /* solid, dotted, dashed, double, inset, outset, groove, ridge */
+        }
+        #d2{
+            /* hexadecimal code ==> #rrggbb */
+            background-color: #893a12;
+            border: 4px dotted white;
+        }
+        #d3{
+            /* rgb ==> rgb(r,g,b) ==> 0 to 255 */
+            background-color: rgb(27, 209, 127);
+            border: 40px ridge red;
+            transition: 2s; 
+        }
+        #d3:hover{
+            transform: rotate(360deg);
+            width:300px;
+        }
+
+        #d4{
+            /* hsl ==> hue saturation and lightness ==>
+            h ==> 0 to 360 ==> color wheel
+            s ==> % of grey ==> percentage
+            l ==> % of white ==> percentage
+            */
+            background-color: hsl(120, 100%, 50%);
+        }
+        #d5{
+            /* hsla==> a ==> alpha ==> opacity level ==> 0 full transparent ,1 not transparent at all  */
+            /* background-color: hsl(120, 50%, 50%,0.2); */
+            /* rgba */
+            background-color: rgb(27, 209, 127,0.9);
+        }
+
+        /* text formatting ,fonts, table design, link,  */
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+</body>
+</html>

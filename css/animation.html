@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation</title>
+
+    <style>
+        div{
+            background-color: chocolate;
+            height: 100px;
+            width: 100px;
+            border: 2px solid red;
+            border-radius: 50%;
+            animation-name: demo;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            /* animation-delay: 1s; */
+            position: relative;        
+        }
+        @keyframes demo {
+            0%{ top:0; left:0;transition-timing-function: ease-out;}
+            50%{top: 81vh; left: 45vw;transition-timing-function: ease-in;}
+            100%{top:0;left:90vw;transition-timing-function: ease-out;}
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+
+
+    </div>
+</body>
+</html>
