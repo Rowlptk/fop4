@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Change</title>
+</head>
+<body>
+    <!-- eval, style, attribute, value, innerHTML -->
+    <input type="text" id="in2">
+    <button onclick="myColor();">Click me</button>
+    <h2></h2>
+    <!-- "2+2*4-7" -->
+    <script>
+        function myColor()
+        {
+            document.querySelector('#in2').style.color = "red";
+            var val = document.querySelector('#in2').value;
+            var res = eval(val);
+            document.querySelector('#in2').value = res;
+            document.querySelector('h2').innerHTML = "The value is: "+res;
+        }
+    </script>
+</body>
+</html>
