@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js random object </title>
+</head>
+<body>
+    
+    <button id="b1"> 0 </button>
+    <button id="b2"> 0 </button>
+    <br>
+    <h1> 0 + 0 = 0 </h1>
+    <span></span>
+    <button id="roll" onclick="myDice();"> roll </button>
+    <!-- date object, math object, windows event==> onload, windows object ==> setInterval -->
+    <!-- string object ==>  theory  , ==, === -->
+    <script>
+        function myDice()
+        {
+            var d1 = Math.ceil(Math.random()*6);
+            var d2 = Math.ceil(Math.random()*6);
+            document.querySelector('#b1').innerHTML = d1;
+            document.querySelector('#b2').innerHTML = d2;
+            document.querySelector('h1').innerHTML = d1+' + '+d2+' = '+(d1+d2);
+            if ((d1 == 6) && (d2 == 6))
+            {
+                document.querySelector('span').innerHTML = "Congratulations! You Got a Double.<br>";
+                document.querySelector('span').style.color = "red";
+            }
+            else
+            {
+                document.querySelector('span').innerHTML = "";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Replace method </title>
+</head>
+<body>
+    <p>This is a paragraph. this paragraph must be changed into statement. This paragraph is a very
+        long paragraph. lets use replace method to change this Paragraph to statement.
+    </p>
+    <button onclick="myChange();">Replace</button>
+
+    <script>
+        function myChange()
+        {
+            var old_string = document.querySelector('p').innerHTML;
+            var new_string = old_string.replace(/paragraph/gi,'statement');
+            document.querySelector('p').innerHTML = new_string; 
+        }
+    </script>
+</body>
+</html>

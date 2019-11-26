@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form validation</title>
+</head>
+<body>
+    
+    <form>
+        Logid Id : <input type="text" id="in1">
+        <br><br>
+        password : <input type="text" id="in2">
+        <span></span>
+        <span></span>
+        <span></span>
+        <br><br>
+        <button type="button" onclick="myCheck();">Click</button>
+    </form>
+        <script>
+            function myCheck()
+            {
+                var password = document.querySelector('#in2').value;
+                var pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+                var check = pattern.test(password);
+                if(check)
+                {
+                    (document.getElementsByTagName('span'))[0].innerHTML = 'valid';
+                    (document.getElementsByTagName('span'))[1].innerHTML = 'valid';
+                    //document.getElementsByTagName('span').innerHTML = 'Valid';
+                    document.querySelector('span').style.color = "green";
+                }
+                else
+                {
+                    document.querySelector('span').innerHTML = "Invalid";
+                    document.querySelector('span').style.color = "red";
+                }
+            }
+        </script>
+
+    <!--DOM Manupulators ==> Document Object Model ==> HTML Tag Hirarchy
+        querySelector('cssSelectorFormat')
+        getElementById('idname')
+        querySelectorAll('cssSelectorFormat') ==> array format
+        getElementsByClassName('className') ==> array format
+        getElementsByTagNAme('TagName') ==> array format
+
+
+        window Object
+        ==>  window.alert() ==> alert() ==> message display ==> ok
+        ==> confirm() ==> ok , cancel ==> ok ==> true, cancel==> false
+        ==> prompt ==> input box ==> ok ==> submit cancel==> close
+
+    -->
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count Down Timer</title>
+</head>
+<body onload="setInterval(myTimer, 1);">
+    <h1>Timer</h1>
+
+<!--  jan 1 1970 ==> 0 milliseconds -->
+<!-- milli/1000 ==> sec
+milli/1000*60 ==> min
+milli/1000*60*60 ==> hr
+milli/1000*60*60*24 ==> day -->
+    <script>
+        function myTimer()
+        {
+            var cur = new Date();
+            var fin = new Date(2020,0,1,0,0,0,000);
+            cur = cur.getTime();
+            fin = fin.getTime();
+            var rem = fin - cur;
+            var day = Math.floor(rem/(1000*60*60*24));
+            rem = (rem%(1000*60*60*24));
+            var hr = Math.floor(rem/(1000*60*60));
+            rem = (rem%(1000*60*60));
+            var min = Math.floor(rem/(1000*60));
+            rem = (rem%(1000*60));
+            var sec = Math.floor(rem/1000);
+            var ms = (rem%1000);
+            document.querySelector('h1').innerHTML = 
+            day + ' day ' +  hr + ' hours ' + min + " minutes " + sec + " seconds " + ms + " milliseconds";
+            //console.log(day, hr, min, sec, ms);
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+
+86400000| 100000000 |1
+           86400000
+
+3600000 |  13600000 |
