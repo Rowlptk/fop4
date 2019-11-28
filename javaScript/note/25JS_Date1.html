@@ -1,0 +1,34 @@
+<!--
+Date get methods:
+These methods can be used for getting information from a date object:
+
+Method				Description
+getFullYear()		Get the year as a four digit number (yyyy)
+getMonth()			Get the month as a number (0-11)
+getDate()			Get the day as a number (1-31)
+getHours()			Get the hour (0-23)
+getMinutes()		Get the minute (0-59)
+getSeconds()		Get the second (0-59)
+getMilliseconds()	Get the millisecond (0-999)
+getTime()			Get the time (milliseconds since January 1, 1970)
+getDay()			Get the weekday as a number (0-6)
+-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript getTime()</h2>
+
+<p>The internal clock in JavaScript counts from midnight January 1, 1970.</p>
+<p>The getTime() function returns the number of milliseconds since then:</p>
+
+<p id="demo"></p>
+
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = 
+"Year: "+d.getFullYear()+"<br>"+"Month: "+(d.getMonth()+1) +"<br>"+d.getDate();
+</script>
+
+</body>
+</html>

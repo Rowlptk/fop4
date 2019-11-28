@@ -1,0 +1,58 @@
+<!--
+Number Methods:
+
+toString():
+==> toString() returns a number as a string.
+var x = 123;
+x.toString();            // returns 123 from variable x
+(123).toString();        // returns 123 from literal 123
+(100 + 23).toString();   // returns 123 from expression 100 + 23
+
+toExponential():
+==> toExponential() returns a string, with a number rounded and 
+written using exponential notation.
+var x = 9.656;
+x.toExponential(2);     // returns 9.66e+0
+x.toExponential(4);     // returns 9.6560e+0
+x.toExponential(6);     // returns 9.656000e+0
+
+toFixed():
+toFixed() returns a string, with the number written with a 
+specified number of decimals:
+var x = 9.656;
+x.toFixed(0);           // returns 10
+x.toFixed(2);           // returns 9.66
+x.toFixed(4);           // returns 9.6560
+x.toFixed(6);           // returns 9.656000
+
+toFixed(2) is perfect for working with money.
+
+toPrecision():
+==> toPrecision() returns a string, with a number written with a specified length:
+var x = 9.656;
+x.toPrecision();        // returns 9.656
+x.toPrecision(2);       // returns 9.7
+x.toPrecision(4);       // returns 9.656
+x.toPrecision(6);       // returns 9.65600
+
+
+Global JavaScript Methods:
+Method			Description
+Number()		Returns a number, converted from its argument.
+parseFloat()	Parses its argument and returns a floating point number
+parseInt()		Parses its argument and returns an integer
+
+Number(true);          // returns 1
+Number(false);         // returns 0
+Number("10");          // returns 10
+Number("  10");        // returns 10
+Number("10  ");        // returns 10
+Number(" 10  ");       // returns 10
+Number("10.33");       // returns 10.33
+Number("10,33");       // returns NaN
+Number("10 33");       // returns NaN 
+Number("John");        // returns NaN
+
+==> If the number cannot be converted, NaN (Not a Number) is returned.
+
+-->

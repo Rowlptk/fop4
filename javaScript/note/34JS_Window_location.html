@@ -1,0 +1,48 @@
+<!--
+Window Location:
+==> window.location object can be used to get the current page address (URL) 
+and to redirect the browser to a new page.
+
+Window Location Href:
+==>  returns the URL of the current page
+document.getElementById("demo").innerHTML =
+"Page location is " + window.location.href;				//www.xyz.com/js/window.html
+
+Window Location Hostname:
+==> returns the name of the internet host (of the current page).
+document.getElementById("demo").innerHTML =
+"Page hostname is " + window.location.hostname;			// www.google.com
+
+Window Location Pathname:
+==> pathname of the current page.
+document.getElementById("demo").innerHTML =
+"Page path is " + window.location.pathname;				// /js/js/window.html
+
+Window Location Protocol:
+==> returns the web protocol of the page
+document.getElementById("demo").innerHTML =
+"Page protocol is " + window.location.protocol;			//https
+
+Window Location Port:
+==> returns the number of the internet host port (of the current page).
+document.getElementById("demo").innerHTML =
+"Port number is " + window.location.port;
+==> Most browsers will not display default port numbers (80 for http and 443 for https)
+
+Window Location Assign:
+==> loads a new document.
+-->
+<html>
+<head>
+<script>
+function newDoc() {
+  window.location.assign("https://www.google.com/")
+}
+</script>
+</head>
+<body>
+
+<input type="button" value="Load new document" onclick="newDoc()">
+
+</body>
+</html>

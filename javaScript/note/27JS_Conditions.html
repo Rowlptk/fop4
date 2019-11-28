@@ -1,0 +1,122 @@
+<!--
+Conditional Statements:
+==>if
+==>if else
+==>if... else if... else
+==>switch
+
+The if Statement:
+==> Use the if statement to specify a block of JavaScript code to be 
+executed if a condition is true.
+
+Syntax:
+if (condition) {
+  block of code to be executed if the condition is true
+}
+
+==> Note: if is in lowercase letters. Uppercase letters (If or IF) 
+will generate a JavaScript error.
+
+example:
+if (hour < 18) {
+  greeting = "Good day";  
+}
+
+
+The else Statement:
+==> Use the else statement to specify a block of code to be 
+executed if the condition is false.
+
+Syntax:
+if (condition) {
+  block of code to be executed if the condition is true
+} else { 
+  block of code to be executed if the condition is false
+}
+
+example:
+if (hour < 18) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+
+
+The else if Statement:
+==> Use the else if statement to specify a new condition if the 
+first condition is false.
+
+Syntax:
+if (condition1) {
+  block of code to be executed if condition1 is true
+} else if (condition2) {
+  block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  block of code to be executed if the condition1 is false and condition2 is false
+}
+
+example:
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+
+The Switch Statement:
+==> Use the switch statement to select one of many code blocks to be executed.
+
+Syntax:
+switch(expression) {
+  case x:
+    code block
+    break;
+  case y:
+    code block
+    break;
+  default:
+    code block
+}
+
+==> The switch expression is evaluated once.
+==> The value of the expression is compared with the values of each case.
+==> If there is a match, the associated block of code is executed.
+
+example:
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+     day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+}
+
+==>The getDay() method returns the weekday as a number between 0 and 6.
+(Sunday=0, Monday=1, Tuesday=2 ..)
+
+==> break Keyword : When JavaScript reaches a break keyword, it breaks out 
+of the switch block.
+
+==> default Keyword: The default keyword specifies the code to run if there 
+is no case match:
+==> The default case does not have to be the last case in a switch block:
+==> If default is not the last case in the switch block, remember to end the default case with a break.
+
+
+-->

@@ -1,0 +1,33 @@
+<!--
+Window Cookie:
+==> Cookies are data, stored in small text files, on your computer.
+	==> When a user visits a web page, his name can be stored in a cookie.
+	==> Next time the user visits the page, the cookie "remembers" his name.
+==> Cookies are saved in name-value pairs like:
+username = Rahul Pathak
+
+Create a Cookie:
+document.cookie
+==> JavaScript can create, read, and delete cookies with this property.
+document.cookie = "username=Rahul Pathak";
+
+==> add an expiry date (in UTC time). By default, the cookie is deleted 
+when the browser is closed:
+document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC";
+
+Read a Cookie:
+var x = document.cookie;
+
+Change a Cookie:
+document.cookie = "username=Pathak Rahul;"
+==> The old cookie is overwritten.
+
+Delete a Cookie:
+==> set the expires parameter to a passed date:
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
+
+
+
+
+
+-->

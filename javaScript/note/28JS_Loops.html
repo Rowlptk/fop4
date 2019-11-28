@@ -1,0 +1,84 @@
+<!--
+Loops:
+==>for - loops through a block of code a number of times
+==>for/in - loops through the properties of an object
+==>while - loops through a block of code while a specified condition is true
+==>do/while - also loops through a block of code while a specified condition is true
+
+The For Loop:
+Syntax:
+for (statement 1; statement 2; statement 3) {
+  code block to be executed
+}
+==> Statement 1 is executed (one time) before the execution of the code block.
+==> Statement 2 defines the condition for executing the code block.
+==> Statement 3 is executed (every time) after the code block has been executed.
+-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Loops</h2>
+
+<p id="demo"></p>
+
+<script>
+var text = "";
+var i;
+for (i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+<!--
+text =  the number is 0
+		the number is 1
+		the number is 2
+		the number is 3
+		the number is 4
+-->
+
+</body>
+</html>
+
+<!--
+
+==> You can initiate many values in statement 1 (separated by comma):
+var cars = ["BMW", "Volvo", "Saab", "Ford"];
+var i, len, text;
+for (i = 0, len = cars.length, text = ""; i < len; i++) {
+  text += cars[i] + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+
+==> Statement 1 can be omitted:
+var i = 2;
+var len = cars.length;
+var text = "";
+for (; i < len; i++) { 
+  text += cars[i] + "<br>";
+}
+
+==> Statement 3 can also be omitted:
+var i = 0;
+var len = cars.length;
+for (; i < len; ) { 
+  text += cars[i] + "<br>";
+  i++;
+}
+
+
+a = 10;
+for(;;)
+{
+	if(a<=1)
+	{
+	break;
+	}
+	a--;
+}
+==> If you omit statement 2, you must provide a break inside the loop. 
+Otherwise the loop will never end. 
+
+
+-->

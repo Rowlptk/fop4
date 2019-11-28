@@ -1,0 +1,82 @@
+<!--
+Strings Methods:
+
+String Length:
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var sln = txt.length;
+
+Special Characters:
+Code	Result	Description
+\'		'		Single quote
+\"		"		Double quote
+\\		\		Backslash
+
+indexOf():
+==>	The indexOf() method returns the 
+	index of (the position of) the first 
+	occurrence of a specified text in a string:
+	
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate");					// 7
+
+
+lastIndexOf():
+==>	lastIndexOf() method returns the index of the last
+occurrence of a specified text in a string:
+
+var str = "Please locate where 'locate' occurs!";
+var pos = str.lastIndexOf("locate");				//21
+
+==> Both indexOf(), and lastIndexOf() return -1 if the text is not found.
+
+Both methods accept a second parameter as the starting position for the search:
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate",15); 				//21
+
+search():
+==> searches a string for a specified value and 
+returns the position of the match
+==> this method cannot take a second start position argument.
+
+var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");						// 7
+
+slice():
+==> extracts a part of a string and returns the extracted part in a new string.
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7, 13);							// Banana
+
+==> If a parameter is negative, the position is counted from the end of the string.
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(-12, -6);						// Banana
+
+If you omit the second parameter, the method will slice out the rest of the string:
+var res = str.slice(7);
+
+counting from the end:
+var res = str.slice(-12);
+
+substring():
+==> substring() is similar to slice().
+==> difference is that substring() cannot accept negative indexes.	
+
+var str = "Apple, Banana, Kiwi";
+var res = str.substring(7, 13);						// Banana	
+
+substr():
+==> substr() is similar to slice().
+==> The difference is that the second parameter specifies the length of the extracted part.
+
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7, 6);							//Banana
+
+If you omit the second parameter, substr() will slice out the rest of the string.
+var res = str.substr(7);
+
+If the first parameter is negative, the position counts from the end of the string.
+var res = str.substr(-4);
+
+
+
+			
+-->

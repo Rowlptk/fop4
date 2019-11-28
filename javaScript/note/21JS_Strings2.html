@@ -1,0 +1,51 @@
+<!--
+replace():
+==> replaces a specified value with another value in a string:
+str = "Please visit Microsoft!";
+var n = str.replace("Microsoft", "neosphere");
+-->
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft! Microsoft!</p>
+
+<script>
+function myFunction() {
+  var str = document.getElementById("demo").innerHTML; 
+  var txt = str.replace(/MICROSOFT/gi,"neosphere");
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
+<!--
+By default, the replace() function replaces only the first match:
+
+str = "Please visit Microsoft and Microsoft!";
+var n = str.replace("Microsoft", "neosphere");
+
+==> the replace() function is case sensitive. 
+Writing MICROSOFT (with upper-case) will not work:
+
+==> To replace case insensitive, 
+use a regular expression with an /i flag (insensitive):
+
+str = "Please visit Microsoft!";
+var n = str.replace(/MICROSOFT/i, "neosphere");
+==> regular expressions are written without quotes.
+
+==> To replace all occurrences, 
+you’ll want to use the regex flavored version of replace().
+
+var str = 'badger badger badger badger';
+str.replace(/badger/g, 'mushroom');
+// "mushroom mushroom mushroom mushroom"
+-->
+

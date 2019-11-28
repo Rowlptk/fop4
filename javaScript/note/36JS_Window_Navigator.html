@@ -1,0 +1,100 @@
+<!--
+Window Navigator:
+==> window.navigator object contains information about the visitor's browser.
+
+Browser Cookies:
+cookieEnabled
+==> cookieEnabled property returns true if cookies are enabled, otherwise false:
+-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The cookieEnabled property returns true if cookies are enabled:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.cookieEnabled is " + navigator.cookieEnabled;
+</script>
+
+</body>
+</html>
+
+<!--
+Browser Application Name:
+appName
+==> appName property returns the application name of the browser:
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.appName is " + navigator.appName;
+</script>
+
+==> Strange enough, "Netscape" is the application name for 
+both IE11, Chrome, Firefox, and Safari.
+
+
+Browser Application Code Name:
+==> appCodeName property returns the application code name of the browser:
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.appCodeName is " + navigator.appCodeName;
+</script>
+
+==> "Mozilla" is the application code name for 
+both Chrome, Firefox, IE, Safari, and Opera.
+
+
+Browser Engine:
+==>product property returns the product name of the browser engine:
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.product is " + navigator.product;
+</script>
+==> Do not rely on this. Most browsers returns "Gecko" as product name !!
+==> This property is kept only for compatibility purposes.
+
+Browser Version:
+==> appVersion property returns version information about the browser
+<script>
+document.getElementById("demo").innerHTML = navigator.appVersion;
+</script>
+
+Browser Agent:
+==> appVersion property returns version information about the browser: /*error*/
+<script>
+document.getElementById("demo").innerHTML = navigator.userAgent;
+</script>
+
+Warning !!!
+The information from the navigator object can often be misleading, 
+and should not be used to detect browser versions
+
+Browser Platform:
+==> platform property returns the browser platform (operating system):
+<script>
+document.getElementById("demo").innerHTML = navigator.platform;
+</script>
+
+Browser Language:
+==> language property returns the browser's language:
+<script>
+document.getElementById("demo").innerHTML = navigator.language;
+</script>
+
+Browser Online:
+==> onLine property returns true if the browser is online:
+<script>
+document.getElementById("demo").innerHTML = navigator.onLine;
+</script>
+
+Java Enabled:
+==> javaEnabled() method returns true if Java is enabled:
+<script>
+document.getElementById("demo").innerHTML = navigator.javaEnabled();
+</script>
+
+-->

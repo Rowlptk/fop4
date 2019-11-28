@@ -1,0 +1,69 @@
+<!--
+toUpperCase():
+==> A string is converted to upper case
+var text1 = "Hello World!";       
+var text2 = text1.toUpperCase();
+
+toLowerCase():
+==> A string is converted to lower case
+var text1 = "Hello World!";      
+var text2 = text1.toLowerCase();
+
+concat():
+==> joins two or more strings:
+var text1 = "Hello";
+var text2 = "World";
+var text3 = text1.concat(" ", text2);
+
+==> concat() method can be used instead of the plus operator.
+var text = "Hello" + " " + "World!";
+var text = "Hello".concat(" ", "World!");
+
+String.trim():
+==>  removes whitespace from both sides of a string.
+var str = "       Hello World!        ";
+alert(str.trim());
+
+charAt():
+==> returns the character at a specified index (position) in a string
+var str = "HELLO WORLD";
+str.charAt(0);            // returns H
+
+charCodeAt():
+==> charCodeAt() method returns the unicode of the character at a specified index in a string:
+==> method returns a UTF-16 code (an integer between 0 and 65535).
+var str = "HELLO WORLD";
+str.charCodeAt(0);         // returns 72
+
+Converting a String to an Array:
+split():
+A string can be converted to an array with the split() method:
+
+var txt = "a,b,c,d,e";   // String
+txt.split(",");          // Split on commas
+txt.split(" ");          // Split on spaces
+txt.split("|");          // Split on pipe
+
+var txt = "Hello";       // String
+txt.split("");           // Split in characters
+-->
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "abcdef";
+  var arr = str.split("");
+  document.getElementById("demo").innerHTML = arr;
+}
+</script>
+
+</body>
+</html>
