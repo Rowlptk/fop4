@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Progess Bar, Badges, pagination</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/mycss.css">
+</head>
+<body style="height:2000px;">
+    <nav class="navbar navbar-inverse "> <!--navbar-fixed-top-->
+        <div class="container-fluid">
+            <div class="navbar-header navbar-left">
+                <a href="/Navigation.html" class="navbar-brand">My Website</a>
+            </div>
+            <ul class="nav navbar-nav navbar-left">
+                <li> <a href="/images/12.jpg" download >Home</a> </li>
+                <li> <a href="/images/29.jpg" download>About</a> </li>
+                <li> <a href="/images/3.jpg" download>Contact</a> </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li data-toggle="modal" data-target="#mymodal"><a href="#"> <span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="#"> <span class="glyphicon glyphicon-user"></span> Register</a></li>
+            </ul>
+
+            <form class="navbar-form navbar-right">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="search..">
+                <div class="input-group-btn">
+                    <button class="btn btn-danger">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </div>
+            </div>
+            </form>
+            
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="carousel slide" id="myCarousel" data-ride="carousel"
+         data-interval="5000" data-keyboard="true" data-pause="null">
+            <!-- image -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="/images/3.jpg" alt="GOT">
+                </div>
+                <div class="item">
+                    <img src="/images/29.jpg" alt="GOT2">
+                </div>
+                <div class="item">
+                    <img src="/images/12.jpg" alt="GOT3">
+                </div>
+            </div>
+
+            <!-- indicators -->
+            <ol class="carousel-indicators">
+                <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- left and right control -->
+            <a href="#myCarousel" class="left carousel-control" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a href="#myCarousel" class="right carousel-control" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+
+            
+        </div>
+
+        <!-- modal -->
+        <div class="modal fade" id="mymodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close" data-dismiss="modal">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="userid">Username : </label>
+                                <input type="text" id="userid" class="form-control" placeholder="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password : </label>
+                                <input type="password" id="pwd" class="form-control"
+                                placeholder="password">
+                            </div>
+                            <input type="submit" value="login" class="btn btn-primary btn-block">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <video controls width="300px;" autoplay loop>
+            <source src="/movie.mp4">
+            <track src="subtitles_en.vtt" kind="subtitles">
+        </video>
+
+    </div>
+
+
+    <script src="/bootstrap/js/jquery-3.3.1.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

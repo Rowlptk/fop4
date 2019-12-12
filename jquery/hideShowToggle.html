@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hide Show Toggle</title>
+</head>
+<body>
+    <button>Click</button>
+    <!-- <button id="b1">click to enter</button> -->
+    <div style="display:none;">
+        <form action="">
+            Other Qualification : <input type="text" >
+        </form>
+        <!-- <button id="b2">Minimize</button> -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('div').toggle(2000);
+            })
+           /* $('#b1').click(function(){
+                $('div').show(3000);
+            })
+            $('#b2').click(function(){
+                $('div').hide(5000);
+            })*/
+        })
+    </script>
+
+
+
+</body>
+</html>

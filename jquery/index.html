@@ -1,0 +1,44 @@
+<!-- jquery ==> javaScript library -->
+<!-- write less do more js library -->
+<!-- actions, effects -->
+<!-- CDN , download  -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>This is some text 1</p>
+    <p>This is some text 2</p>
+    <p>This is some text 3</p>
+    <button>Click</button>
+
+    <script>
+        $(document).ready(function(){
+            $('p').on({
+                click : function(){
+                    $(this).css("color","red");
+                },
+                dblclick : function(){
+                    $(this).css("color","black");
+                },
+                mouseenter : function(){
+                    $(this).css("fontSize","1.2em");
+                },
+                mouseout : function(){
+                    $(this).css("fontSize","16px");
+                }  
+            })   
+        })    
+            /*$('button').click(function(){
+                $('p').hide();
+                $(this).hide();
+            })*/
+        
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fade effects</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- fadeIn, fadeOut, fadeToggle, fadeTo -->
+</head>
+<body>
+    <div id="panel" style="background-color: brown;padding:10px;display:none;">
+        <h1 style="color:white; text-align:center;">Welcome to Fade World!</h1>
+    </div>
+    <div id="slide" style="background-color: brown;padding:10px;display:none;color:white;">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum at expedita nemo quasi recusandae nulla perferendis, veniam laudantium optio ipsa officiis possimus illum assumenda doloremque nobis est, provident aperiam incidunt!      
+        </p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum at expedita nemo quasi recusandae nulla perferendis, veniam laudantium optio ipsa officiis possimus illum assumenda doloremque nobis est, provident aperiam incidunt!      
+        </p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum at expedita nemo quasi recusandae nulla perferendis, veniam laudantium optio ipsa officiis possimus illum assumenda doloremque nobis est, provident aperiam incidunt!      
+        </p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum at expedita nemo quasi recusandae nulla perferendis, veniam laudantium optio ipsa officiis possimus illum assumenda doloremque nobis est, provident aperiam incidunt!      
+        </p>
+    </div>
+    <button id="b1">fade in</button>
+    <button id="b2">fade out</button>
+    <button id="b3">fade toggle</button>
+    <button id="b4">fade to</button>
+
+
+    <script>
+        $(function(){
+            $('#panel').mouseleave(function(){
+                $('#slide').slideUp(3000);
+            })
+            $('#panel').mouseover(function(){
+                $('#slide').slideDown(3000);
+            })
+            $('#b1').click(function(){
+                $('#panel').fadeIn(5000);
+            })
+            $('#b2').click(function(){
+                $('#panel').fadeOut(5000);
+            })
+            $('#b3').click(function(){
+                $('#panel').fadeToggle(2000);
+            })
+            $('#b4').click(function(){
+                $('#panel').fadeTo(3000, 0.2);
+            })
+        })
+    </script>
+</body>
+</html>
