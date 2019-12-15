@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filters in Angularjs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myCtrl">
+        <h1>{{ str }}</h1>
+        <h1>{{ str | uppercase }}</h1>
+        <h1>{{ str | lowercase }}</h1>
+
+        <h1>{{ money | currency}}</h1>
+        <h1>{{ money*113.21 | currency:'Nrs'}}</h1>
+        <h1>{{ money*0.75 | currency:'&pound;'}} </h1>
+
+        <h1>{{ today | date }}</h1>
+        <h1>{{ today | date:'y-MM-d'}}</h1>
+        <h1>{{ today | date: 'shortDate'}}</h1>
+
+        <input type="text" ng-model="search">
+        <ul>
+            <li ng-repeat="x in animals | filter:search" >{{x}}</li>
+        </ul>
+
+    </div>
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl',function($scope){
+            $scope.str = 'Hello';
+            $scope.money = 100;
+            $scope.today = new Date();
+            $scope.animals = ['lion','tiger','wolf','dog','cat','bear','elephant'];
+        })
+    </script>
+</body>
+</html>

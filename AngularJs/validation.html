@@ -1,0 +1,57 @@
+<!-- $valid ==> validity -->
+<!-- $invalid ==> invalidity -->
+<!-- $dirty ==> dirtyness -->
+<!-- $pristine ==> not dirty -->
+<!-- $touched, $untouched -->
+<!-- .ng-valid, .ng-invalid, .ng-dirty, .... -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <style>
+        #in1.ng-valid{
+            background:red;
+        }
+        #in2.ng-invalid{
+            background:blue;
+        }
+        #in3.ng-dirty{
+            background:green;
+        }
+        #in4.ng-pristine{
+            background:yellow;
+        }
+        #in5.ng-touched{
+            background:goldenrod;
+        }
+        #in6.ng-untouched{
+            background:palevioletred;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="">
+    <form name="myform">
+        <input type="text" id="in1" ng-model="input1" name="input1" required> 
+        <span>{{ myform.input1.$valid }}</span>
+        <br>
+        <input type="text" id="in2" ng-model="input2" name="input2" required> 
+        <span>{{ myform.input2.$invalid }}</span>
+        <br>
+        <input type="text" id="in3" ng-model="input3" name="input3" required> 
+        <span>{{ myform.input3.$dirty }}</span>
+        <br>
+        <input type="text" id="in4" ng-model="input4" name="input4" required> 
+        <span>{{ myform.input4.$pristine }}</span>
+        <br>
+        <input type="text" id="in5" ng-model="input5" name="input5" required> 
+        <span>{{ myform.input5.$touched }}</span>
+        <br>
+        <input type="text" id="in6" ng-model="input6" name="input6" required> 
+        <span>{{ myform.input6.$untouched }}</span>
+    </form>
+</body>
+</html>

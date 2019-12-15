@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="">
+    <form name="myForm" novalidate>
+        <input type="text" name="myUser" ng-model="myUser" required placeholder="username">
+        <span style="color:red;">
+            <span ng-show="myForm.myUser.$dirty && myForm.myUser.$error.required">username is required!</span>
+        </span>
+        <br><br>
+        <input type="email" name="myEmail" ng-model="myEmail" required placeholder="email">
+        <span style="color:red;" ng-show="myForm.myEmail.$dirty && myForm.myEmail.$invalid">
+            <span ng-show="myForm.myEmail.$error.required">email is required!</span>
+            <span ng-show="myForm.myEmail.$error.email">email is invalid!</span>
+        </span>
+        <br><br>
+        <input type="submit" value="click" ng-disabled="myForm.$invalid">
+    </form>
+</body>
+</html>
