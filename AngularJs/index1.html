@@ -1,0 +1,41 @@
+<!-- Angularjs ==> Js framework ==> SPA ==> single page web application -->
+<!-- MVC ==> Modal ,view and Controller -->
+<!-- Modal ==> data -->
+<!-- View ==> Presentation -->
+<!-- Controller ==> control data(modal) to view -->
+<!-- app -->
+<!-- CDN or Download -->
+<!-- download ==> Angular.org ==> 1.6.9 -->
+<!-- CDN ==> w3schools.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<!-- ng-app, ng-controller, ng-bind, ng-include, ng-repeat , ng-init-->
+<body ng-app="myApp" ng-controller="myCtrl">
+    <input type="text" ng-model="demo">
+    <h1 ng-bind="demo"></h1>
+    <p>Hello {{ demo }}</p>
+
+    <div ng-include="'welcome.html'" style="border:1px solid red;">
+    </div>
+
+    <ul>
+        <li ng-repeat="item in fruits">{{item}}</li>
+    </ul>
+
+    <input type="text" ng-model="firstName" ng-init="firstName='Raman'">
+
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl',function($scope){
+            $scope.demo = "angularjs";
+            $scope.fruits = ['apple','mango','cherry','grapes','gauva','papaya'];
+        });
+    </script>
+</body>
+</html>

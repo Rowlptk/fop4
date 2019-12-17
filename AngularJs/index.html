@@ -1,41 +1,75 @@
-<!-- Angularjs ==> Js framework ==> SPA ==> single page web application -->
-<!-- MVC ==> Modal ,view and Controller -->
-<!-- Modal ==> data -->
-<!-- View ==> Presentation -->
-<!-- Controller ==> control data(modal) to view -->
-<!-- app -->
-<!-- CDN or Download -->
-<!-- download ==> Angular.org ==> 1.6.9 -->
-<!-- CDN ==> w3schools.com -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Angular App</title>
+    <title>Angular Routing</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .navbar {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: #4c6ca0;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .navbar li{
+            float: left;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            display: block;
+            color: #fff;
+            padding: 15px 20px;
+        }
+
+        #myview{
+            text-align: center;
+            width: 500px;
+            margin: auto;
+            height: 300px;
+            border: 1px dotted grey;
+            margin-top: 10px;
+        }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 </head>
-<!-- ng-app, ng-controller, ng-bind, ng-include, ng-repeat , ng-init-->
-<body ng-app="myApp" ng-controller="myCtrl">
-    <input type="text" ng-model="demo">
-    <h1 ng-bind="demo"></h1>
-    <p>Hello {{ demo }}</p>
-
-    <div ng-include="'welcome.html'" style="border:1px solid red;">
-    </div>
-
-    <ul>
-        <li ng-repeat="item in fruits">{{item}}</li>
+<body ng-app="myApp">
+    <ul class="navbar">
+        <li><a href="#/!">Home</a></li>
+        <li><a href="#!about">About</a></li>
+        <li><a href="#!contact">Contact</a></li>
+        <li><a href="#!services">Services</a></li>
     </ul>
 
-    <input type="text" ng-model="firstName" ng-init="firstName='Raman'">
+    <div ng-view id="myview">
 
+    </div>
     <script>
-        var app = angular.module('myApp',[]);
-        app.controller('myCtrl',function($scope){
-            $scope.demo = "angularjs";
-            $scope.fruits = ['apple','mango','cherry','grapes','gauva','papaya'];
+        var app = angular.module('myApp',['ngRoute']);
+        app.config(function($routeProvider) {
+            $routeProvider
+            .when('/', {
+                templateUrl : "greetings.html"
+            })
+            .when('/about' ,{ 
+                templateUrl : 'about.html'
+            })
+            .when('/contact' , {
+                templateUrl : 'contact.html'
+            })
+            .when('/services', {
+                templateUrl : 'services.html'
+            });
         });
     </script>
+
+
 </body>
 </html>
