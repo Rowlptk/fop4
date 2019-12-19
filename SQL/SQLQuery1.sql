@@ -90,6 +90,8 @@ values ('gita',9801200115, 30)
 
 select * from school
 
+select * from Customers
+use AdventureWorks2012
 -- forign key , primary key
 -- adventureworks ==> sample database by microsoft
 -- join, view, stored procedure, triggers, error handling
